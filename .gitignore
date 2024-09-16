@@ -1,5 +1,11 @@
+# rust
+data
+
+# python
 .venv
 ipynb_checkpoints
 __pycache__
-data
 *.egg-info
+
+# rust
+target
