@@ -5,4 +5,7 @@ inference-onnx-python:
 	cd onnx-create && uv run onnx_playground/test_inference_via_onnx.py
 
 inference-onnx-rust:
-	cd onnx-serve && cargo run --release
+	cd onnx-serve && ./target/release/onnx-serve
+
+benchmark:
+	./scripts/benchmark.sh
