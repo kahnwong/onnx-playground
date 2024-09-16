@@ -18,5 +18,8 @@ _, X_test, _, _ = train_test_split(X, y)
 input_name = sess.get_inputs()[0].name
 label_name = sess.get_outputs()[0].name
 
+print(input_name)
+print(label_name)
+
 pred_onx = sess.run([label_name], {input_name: X_test.astype(np.float32)})[0]
 print(pred_onx)

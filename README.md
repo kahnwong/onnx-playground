@@ -1,3 +1,5 @@
 # ONNX Playground
 
-<https://onnx.ai/sklearn-onnx/>
+## Refs
+- <https://onnx.ai/sklearn-onnx/>
+- <https://ort.pyke.io/rustdoc/ort/type.Tensor.html>
