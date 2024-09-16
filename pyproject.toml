@@ -1,0 +1,14 @@
+[project]
+name = "onnx-playground"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "skl2onnx>=1.17.0",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "jupyter>=1.1.1",
+]
