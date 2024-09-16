@@ -22,5 +22,5 @@ clr = RandomForestClassifier()
 clr.fit(X_train, y_train)
 
 # save model
-os.makedirs(config.SCIKIT_LEARN_MODEL_PATH, exist_ok=True)
-joblib.dump(clr, config.SCIKIT_LEARN_MODEL_NAME)
+os.makedirs(config.SCIKIT_LEARN_MODEL_FOLDER, exist_ok=True)
+joblib.dump(clr, config.SCIKIT_LEARN_MODEL_PATH)
