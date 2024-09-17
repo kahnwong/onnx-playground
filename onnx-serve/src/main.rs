@@ -3,7 +3,7 @@ use ndarray::prelude::*;
 
 fn main() -> ort::Result<()>{
     // init model
-    let model = Session::builder()?
+    let session = Session::builder()?
         .with_optimization_level(GraphOptimizationLevel::Level3)?
         .with_intra_threads(4)?
         .commit_from_file("../data/model-onnx/model.onnx")?;
@@ -25,7 +25,7 @@ fn main() -> ort::Result<()>{
 
     // prediction
     // let outputs = model.run([tensor.into()])?; // shorthand
-    let outputs = model.run(ort::inputs!["X" => tensor]?)?;
+    let outputs = session.run(ort::inputs!["X" => tensor]?)?;
     let predictions = outputs["output_label"].try_extract_tensor::<i64>()?;
     println!("{}", predictions);
 
